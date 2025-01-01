@@ -1,0 +1,127 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Yourself</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Animation for underline effect */
+        @keyframes underline {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 100%;
+        }
+        }
+
+        .underline-animate {
+        position: relative;
+        display: inline-block;
+        }
+
+        .underline-animate::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #ff6a00; /* Orange underline */
+        transition: width 0.3s ease-in-out;
+        }
+
+        .underline-animate:hover::after {
+        width: 100%;
+        }
+
+        /* Spark effect */
+        #spark-container {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        }
+
+        .spark {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(255,165,0,1) 0%, rgba(255,69,0,0.8) 50%, rgba(255,0,0,0.5) 100%);
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 8px rgba(255,165,0,0.8), 0 0 15px rgba(255,69,0,0.6);
+        animation: spark-animation 1s ease-out forwards;
+        }
+    
+    </style>
+    </head>
+    <body class="bg-black text-neutral-50">
+    <!-- Sparkle Effect Container -->
+    <div id="spark-container"></div>
+
+    <header class="flex justify-between items-center px-8 py-4">
+        <!-- Add underline animation class here -->
+        <a href="/" class="text-lg text-orange-400 underline-animate">← Back to Home</a>
+    </header>
+
+    <main class="flex flex-col items-center min-h-screen py-16">
+        <div class="bg-neutral-900 shadow-lg rounded-lg p-8 max-w-lg w-full">
+        <h1 class="text-3xl font-bold text-center text-orange-400 mb-6">Register Yourself</h1>
+        <p class="text-center text-neutral-400 mb-8">
+            Join our community by filling out this form. Stay connected and updated!
+        </p>
+
+        <form action="/register" method="POST">
+            <!-- Name Field -->
+            <div class="mb-6">
+            <label for="name" class="block mb-2 text-sm text-neutral-300">Full Name</label>
+            <input type="text" id="name" name="name" required placeholder="John Doe"
+                class="w-full px-4 py-2 rounded-md bg-neutral-800 text-neutral-50 border border-neutral-700 focus:ring-2 focus:ring-orange-500 focus:outline-none">
+            </div>
+
+            <!-- Email Field -->
+            <div class="mb-6">
+            <label for="email" class="block mb-2 text-sm text-neutral-300">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="john.doe@example.com"
+                class="w-full px-4 py-2 rounded-md bg-neutral-800 text-neutral-50 border border-neutral-700 focus:ring-2 focus:ring-orange-500 focus:outline-none">
+            </div>
+
+            <!-- Phone Number Field -->
+            <div class="mb-6">
+            <label for="phone" class="block mb-2 text-sm text-neutral-300">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required placeholder="+123 456 7890"
+                class="w-full px-4 py-2 rounded-md bg-neutral-800 text-neutral-50 border border-neutral-700 focus:ring-2 focus:ring-orange-500 focus:outline-none">
+            </div>
+
+            <!-- Address Field -->
+            <div class="mb-6">
+            <label for="address" class="block mb-2 text-sm text-neutral-300">Short Into About You</label>
+            <textarea id="address" name="address" rows="3" placeholder="Your Short Intro here"
+                class="w-full px-4 py-2 rounded-md bg-neutral-800 text-neutral-50 border border-neutral-700 focus:ring-2 focus:ring-orange-500 focus:outline-none"></textarea>
+            </div>
+            <div class="mb-6">
+                <label for="linkedin" class="block mb-2 text-sm text-neutral-300">LinkedIn ID</label>
+                <textarea id="linkedin" name="linkedin" rows="1" placeholder="www.linkedin.com"
+                  class="w-full px-4 py-2 rounded-md bg-neutral-800 text-neutral-50 border border-neutral-700 focus:ring-2 focus:ring-orange-500 focus:outline-none"></textarea>
+              </div>
+              <div class="mb-6">
+                <label for="github" class="block mb-2 text-sm text-neutral-300">GitHub ID</label>
+                <textarea id="github" name="github" rows="1" placeholder="www.github.com"
+                  class="w-full px-4 py-2 rounded-md bg-neutral-800 text-neutral-50 border border-neutral-700 focus:ring-2 focus:ring-orange-500 focus:outline-none"></textarea>
+              </div>
+              
+
+            <!-- Submit Button -->
+            <button type="submit"
+            class="w-full bg-orange-400 text-black font-semibold py-2 px-4 rounded-md hover:bg-orange-500 focus:ring-4 focus:ring-orange-300">
+            Submit
+            </button>
+        </form>
+        </div>
+    </main>
+    <script src="script.js"></script>
+    </body>
+    </html>
