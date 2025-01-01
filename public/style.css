@@ -844,3 +844,6 @@ video {
   color: white;
   cursor: pointer;
 }
+#mobile-navbar {
+  z-index: 1000;  /* Ensure navbar has a higher stacking order */
+}
