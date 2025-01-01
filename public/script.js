@@ -20,6 +20,10 @@ if (menuToggle && mobileNavbar) {
 }
 
 // Register and Explore Button Event Listeners for Mobile and Desktop
+// Register and Explore Button Event Listeners for Mobile and Desktop
+const registerButton = document.getElementById("register-button");
+const exploreButton = document.getElementById("explore-button");
+
 if (registerButton) {
   registerButton.addEventListener("click", () => {
     // Register button logic
@@ -41,7 +45,6 @@ if (exploreButton) {
     window.location.href = '/cards';  // Redirect to the explore community page
   });
 }
-
 
 // Cursor Spark Effect
 const sparkContainer = document.getElementById("spark-container");
@@ -187,4 +190,3 @@ if (submitButton) {
       .catch((err) => console.error("Error submitting data:", err));
   });
 }
-  
