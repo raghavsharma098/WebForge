@@ -19,6 +19,34 @@ if (menuToggle && mobileNavbar) {
   });
 }
 
+// Register and Explore Button Event Listeners for Mobile and Desktop
+const registerButton = document.getElementById("register-button");
+const exploreButton = document.getElementById("explore-button");
+
+if (registerButton) {
+  registerButton.addEventListener("click", () => {
+    // Register button logic
+    console.log("Register clicked");
+  });
+  registerButton.addEventListener("touchstart", (e) => {
+    e.preventDefault(); // Prevent default touch behavior
+    // Register button logic
+    console.log("Register touched");
+  });
+}
+
+if (exploreButton) {
+  exploreButton.addEventListener("click", () => {
+    // Explore button logic
+    console.log("Explore clicked");
+  });
+  exploreButton.addEventListener("touchstart", (e) => {
+    e.preventDefault(); // Prevent default touch behavior
+    // Explore button logic
+    console.log("Explore touched");
+  });
+}
+
 // Cursor Spark Effect
 const sparkContainer = document.getElementById("spark-container");
 const sparkPool = [];
