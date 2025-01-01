@@ -20,32 +20,28 @@ if (menuToggle && mobileNavbar) {
 }
 
 // Register and Explore Button Event Listeners for Mobile and Desktop
-const registerButton = document.getElementById("register-button");
-const exploreButton = document.getElementById("explore-button");
-
 if (registerButton) {
   registerButton.addEventListener("click", () => {
     // Register button logic
-    console.log("Register clicked");
+    window.location.href = '/register';  // Redirect to the register page
   });
   registerButton.addEventListener("touchstart", (e) => {
-    e.preventDefault(); // Prevent default touch behavior
-    // Register button logic
-    console.log("Register touched");
+    e.preventDefault();  // Prevent default touch behavior
+    window.location.href = '/register';  // Redirect to the register page
   });
 }
 
 if (exploreButton) {
   exploreButton.addEventListener("click", () => {
     // Explore button logic
-    console.log("Explore clicked");
+    window.location.href = '/cards';  // Redirect to the explore community page
   });
   exploreButton.addEventListener("touchstart", (e) => {
-    e.preventDefault(); // Prevent default touch behavior
-    // Explore button logic
-    console.log("Explore touched");
+    e.preventDefault();  // Prevent default touch behavior
+    window.location.href = '/cards';  // Redirect to the explore community page
   });
 }
+
 
 // Cursor Spark Effect
 const sparkContainer = document.getElementById("spark-container");
