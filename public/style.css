@@ -93,20 +93,6 @@ header {
   z-index: 1000; /* Make sure it's above other content */
 }
 
-
-#custom-cursor {
-  position: fixed; /* Fixed position ensures it follows the viewport */
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 150, 50, 0.5) 70%);
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  mix-blend-mode: difference; /* Makes it look more dynamic */
-  z-index: 10000; /* Ensure it appears on top of all content */
-}
-
-
 hr {
   border-top-width: 1px;
   color: inherit;
